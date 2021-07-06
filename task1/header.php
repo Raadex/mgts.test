@@ -18,6 +18,8 @@ if (((isset($_GET['logout'])) && ($_GET['logout'] === 'yes')) || (!isset($_COOKI
     header("Location: /task1/");
 }
 
+$isNotAuth = false;
+
 if (isset($_POST['login']) && isset($_POST['password'])) {
     $logins = require(__DIR__ . '/include/login.php');
     $passwords = require(__DIR__ . '/include/password.php');
