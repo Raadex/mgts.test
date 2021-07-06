@@ -1,1 +1,1 @@
-<p><b>Привет <?= htmlspecialchars($_SESSION['user']) ?></b></p>
+<p><b>Привет <?= htmlspecialchars($_SESSION['userName']) ?></b></p>

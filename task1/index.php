@@ -11,7 +11,7 @@ require_once(__DIR__ . '/header.php');
 </head>
 <body>
 <?php
-if (empty($_SESSION['user'])) { ?>
+if (empty($_SESSION['userName'])) { ?>
     <form action="/task1/" method="post">
     <label>Логин</label>
     <input type="text" required name="login" value="">
