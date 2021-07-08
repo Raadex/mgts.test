@@ -1,0 +1,35 @@
+SELECT
+    *
+FROM
+    users AS u
+INNER JOIN addresses AS a
+ON
+    u.address_id = a.id
+WHERE
+    a.house = '17А' AND a.street = 'Ленина'
+
+
+
+
+
+
+SELECT
+    *
+FROM
+    users
+WHERE
+    surname = 'Иванов' AND NAME = 'Иван' AND patronymic = 'Иванович'
+
+
+
+
+
+SELECT
+    *
+FROM
+    users AS u
+INNER JOIN documents AS d
+ON
+    d.user_id = u.id
+WHERE
+    d.type = 'Паспорт' AND d.number = '4567909090'
