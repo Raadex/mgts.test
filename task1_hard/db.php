@@ -16,8 +16,7 @@ function get_pdo()
 function get_user_by_login($login, $pdo) {
     $stmt = $pdo->prepare('SELECT * FROM users WHERE login = :login LIMIT 1');
     $stmt->execute(array('login' => $login));
-
-    return $stmt->fetchAll()[0];
+    return $stmt->fetch();
 }
 
 function login($login, $pass, $pdo)
@@ -25,6 +24,7 @@ function login($login, $pass, $pdo)
     $user = get_user_by_login($login, $pdo);
     if (!empty($user) && ($pass === $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
+        $_SESSION['name'] = $user['name'];
         if (!isset($_COOKIE['login'])) {
             setcookie('login', $_POST['login'], time() + 60, '/task1_hard/');
         }

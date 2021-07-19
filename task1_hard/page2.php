@@ -12,7 +12,7 @@ require_once(__DIR__ . '/header.php');
 </head>
 <body>
 <a href="page1.php">Страница 1</a>
-<a href="/task1/">Главная</a>
+<a href="/task1_hard/">Главная</a>
 
 <?php
 

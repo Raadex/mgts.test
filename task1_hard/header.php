@@ -24,9 +24,9 @@ if (((isset($_GET['logout'])) && ($_GET['logout'] === 'yes')) || (!isset($_COOKI
 
 if (isset($_POST['login']) && isset($_POST['password'])) {
     if (login($_POST['login'], $_POST['password'], $pdo)) {
-        $idNotAuth = false;
+        $isNotAuth = false;
     } else {
-        $idNotAuth = true;
+        $isNotAuth = true;
     }
 }
 
@@ -44,6 +44,6 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
 
 <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] > 0): ?>
 
-    <a href="/task1/?logout=yes">Выйти</a>
+    <a href="/task1_hard/?logout=yes">Выйти</a>
 
 <?php endif;
